@@ -28,6 +28,26 @@ namespace Skysport_Breakers.Controllers
             return View();
         }
 
+        public IActionResult ContactPage()
+        {
+            return View();
+        }
+
+        public IActionResult TeamPage()
+        {
+            return View();
+        }
+
+        public IActionResult Coaches()
+        {
+            return View();
+        }
+
+        public IActionResult Stats()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
