@@ -36,7 +36,6 @@ namespace Skysport_Breakers.Areas.Identity.Pages.Account
             _logger = logger;
             _emailSender = emailSender;
         }
-
         [BindProperty]
         public InputModel Input { get; set; }
 
@@ -47,12 +46,12 @@ namespace Skysport_Breakers.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
-            [EmailAddress]
+            [DataType(DataType.Text)]
             [Display(Name = "First Name")]
             public string FirstName { get; set; }
 
             [Required]
-            [EmailAddress]
+            [DataType(DataType.Text)]
             [Display(Name = "Last Name")]
             public string LastName { get; set; }
 
@@ -85,7 +84,7 @@ namespace Skysport_Breakers.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email, FirstName=Input.FirstName, LastName=Input.LastName };
+                var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email, FirstName = Input.FirstName, LastName = Input.LastName };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
