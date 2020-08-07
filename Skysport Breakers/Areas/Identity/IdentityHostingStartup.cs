@@ -20,13 +20,12 @@ namespace Skysport_Breakers.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("AuthDbContextConnection")));
 
-                services.AddDefaultIdentity<ApplicationUser>(options =>
-                { options.SignIn.RequireConfirmedAccount = false;
-                  options.Password.RequireLowercase = false;
-                  options.Password.RequireUppercase = false;
+                services.AddDefaultIdentity<ApplicationUser>(options => {
+                    options.Password.RequireLowercase = false;
+                    options.Password.RequireUppercase = false;
+                    options.SignIn.RequireConfirmedAccount = false;
                 })
-                
-                    .AddEntityFrameworkStores<AuthDbContext>();
+                .AddEntityFrameworkStores<AuthDbContext>();
             });
         }
     }
