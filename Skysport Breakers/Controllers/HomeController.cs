@@ -28,7 +28,27 @@ namespace Skysport_Breakers.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult ContactPage()
+        {
+            return View();
+        }
+
+        public IActionResult TeamPage()
+        {
+            return View();
+        }
+
+        public IActionResult Coaches()
+        {
+            return View();
+        }
+
+        public IActionResult Stats()
+        {
+            return View();
+        }
+
+          [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
