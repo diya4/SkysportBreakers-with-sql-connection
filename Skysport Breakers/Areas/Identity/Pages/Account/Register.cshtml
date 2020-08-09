@@ -10,8 +10,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-
+<html>
+<body>
 <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
     <div asp-validation-summary="All" class="text-danger"></div>
     <div class="row">
@@ -56,6 +56,8 @@
             <button type="submit" class="btn btn-primary btn-block">Register</button>
    </div>
 </form>
+</body>
+</html>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
