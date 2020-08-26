@@ -11,7 +11,7 @@
         /* Right-aligned section inside the top navigation */
         .topnav-right {
             float: right;
-        }
+        }    
     </style>
 </head>
 <body>
@@ -21,18 +21,25 @@
             <div class="w3-bar w3-white w3-card" id="myNavbar">
                 <a href="@Url.Action("Index","Home")" class="w3-bar-item w3-button w3-wide">Skysport Breakers</a>
                 <div class="topnav-right">
-                    <a href="@Url.Action("TeamPage","Home")" class="w3-bar-item w3-button"><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i>Team</a>
-                    <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Merchandise</a>
-                    <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Tickets</a>
-                    <a href="@Url.Action("ContactPage","Home")" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact</a>
-                    <a href="@Url.Action("Privacy","Home")" class="w3-bar-item w3-button"><i class="fa fa-lock"></i> Privacy</a>
-                    <a asp-area="Identity" asp-page="/Account/Login"  class="w3-bar-item w3-button"><i class="fa fa-user"></i> Login/Register</a>
+                    <div class="w3-dropdown-hover w3-hide-small">
+                        <button class="w3-button" title="Notifications"> <i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i>Team <i class="fa fa-caret-down"></i></button>
+                        <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                            <a href="@Url.Action("TeamPage","Home")" class="w3-bar-item w3-button">Team</a>
+                            <a href="@Url.Action("Coaches","Home")" class="w3-bar-item w3-button">Coaches and Support Staff</a>
+                            <a href="@Url.Action("Stats","Home")" class="w3-bar-item w3-button">Statistics</a>
+                        </div>
+                    </div>
+                        <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Merchandise</a>
+                        <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Tickets</a>
+                        <a href="@Url.Action("ContactPage","Home")" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact</a>
+                        <a href="@Url.Action("Privacy","Home")" class="w3-bar-item w3-button"><i class="fa fa-lock"></i> Privacy</a>
+                        <a asp-area="Identity" asp-page="/Account/Login"  class="w3-bar-item w3-button"><i class="fa fa-user"></i> Login/Register</a>
                         <div>
                             <!--partial layout for logged in user-->
                             <partial name="_LoginPartial" />
                         </div>
+                    </div>
                 </div>
-            </div>
         </div>
     </header>
     <br /><br /><br /><br /><br><br>
