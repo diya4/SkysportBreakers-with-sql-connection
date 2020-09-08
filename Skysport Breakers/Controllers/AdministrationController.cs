@@ -11,5 +11,11 @@ namespace Skysport_Breakers.Controllers
         {
             this.roleManager = roleManage;
         }
+
+        [HttpGet]
+        public IActionResult CreateRole()
+        {
+            return view();
+        }
     }
 }
