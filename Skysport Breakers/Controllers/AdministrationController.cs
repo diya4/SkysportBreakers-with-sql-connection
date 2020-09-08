@@ -5,7 +5,11 @@ using System.Threading.Tasks;
 
 namespace Skysport_Breakers.Controllers
 {
-    public class AdministrationController
+    public class AdministrationController : Controllers
     {
+        public AdministrationController(RoleManage<IdentifyRole> roleManage)
+        {
+            this.roleManager = roleManage;
+        }
     }
 }
