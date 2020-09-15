@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Skysport_Breakers.Models;
 
 namespace Skysport_Breakers.Controllers
 {
@@ -11,7 +12,7 @@ namespace Skysport_Breakers.Controllers
     {
         private RoleManager<IdentityRole> roleManager;
 
-        public AdministrationController (RoleManager<IdentityRole> roleManager)
+        public AdministrationController(RoleManager<IdentityRole> roleManager)
         {
             this.roleManager = roleManager;
         }
@@ -19,6 +20,34 @@ namespace Skysport_Breakers.Controllers
         public IActionResult CreateRole()
         {
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateRole(CreateRoleViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                // We just need to specify a unique role name to create a new role
+                IdentityRole identityRole = new IdentityRole
+                {
+                    Name = model.RoleName
+                };
+
+                // Saves the role in the underlying AspNetRoles table
+                IdentityResult result = await roleManager.CreateAsync(identityRole);
+
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("index", "home");
+                }
+
+                foreach (IdentityError error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+            }
+
+            return View(model);
         }
     }
 }
