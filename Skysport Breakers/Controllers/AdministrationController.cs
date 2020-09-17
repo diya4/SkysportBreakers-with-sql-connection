@@ -11,14 +11,10 @@ namespace Skysport_Breakers.Controllers
     public class AdministrationController : Controller
     {
         private readonly RoleManager<IdentityRole> roleManager;
-        private readonly UserManager<IdentityRole> userManager;
 
-        public AdministrationController(
-            RoleManager<IdentityRole> roleManager,
-            UserManager<IdentityRole> userManager)
+        public AdministrationController(RoleManager<IdentityRole> roleManager)
         {
             this.roleManager = roleManager;
-            this.userManager = userManager;
         }
 
         [HttpGet]
@@ -55,11 +51,12 @@ namespace Skysport_Breakers.Controllers
             return View(model);
         }
 
+
         [HttpGet]
         public IActionResult ListRoles()
         {
-            var users = userManager.Users;
-            return View(users);
+            var roles = roleManager.Roles;
+            return View(roles);
         }
     }
 }
