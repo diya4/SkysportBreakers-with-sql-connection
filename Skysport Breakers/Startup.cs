@@ -28,7 +28,7 @@ namespace Skysport_Breakers
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddIdentityCore<ApplicationUser>().AddRoles<IdentityRole>().AddEntityFrameworkStores<Data.AuthDbContext>();
-        }
+    }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

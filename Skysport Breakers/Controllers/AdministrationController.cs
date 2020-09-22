@@ -18,6 +18,7 @@ namespace Skysport_Breakers.Controllers
             UserManager<ApplicationUser> userManager)
         {
             this.roleManager = roleManager;
+            this.userManager = userManager;
         }
 
         [HttpGet]
