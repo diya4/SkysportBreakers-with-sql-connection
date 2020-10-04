@@ -63,6 +63,7 @@ namespace Skysport_Breakers.Controllers
             return View(roles);
         }
 
+        // Role ID is passed from the URL to the action
         [HttpGet]
         public async Task<IActionResult> EditRole(string id)
         {

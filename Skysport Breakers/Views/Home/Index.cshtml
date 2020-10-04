@@ -16,34 +16,60 @@
 </STYLE>
 <html>
 <body>
-    <br /><br />
+    <br />
     <div> <h1> #UNBREAKABLE</h1></div>
-       <script>
-        // Modal Image Gallery
-        function onClick(element) {
-            document.getElementById("img01").src = element.src;
-            document.getElementById("modal01").style.display = "block";
-            var captionText = document.getElementById("caption");
-            captionText.innerHTML = element.alt;
-        }
-
-
-        // Toggle between showing and hiding the sidebar when clicking the menu icon
-        var mySidebar = document.getElementById("mySidebar");
-
-        function w3_open() {
-            if (mySidebar.style.display === 'block') {
-                mySidebar.style.display = 'none';
-            } else {
-                mySidebar.style.display = 'block';
+    <h2> Latest videos</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">
+                    <iframe width="460" height="215" src="https://www.youtube.com/embed/z7iOmaz4ZrM" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </th>
+                <th scope="col">
+                    <iframe width="460" height="215" src="https://www.youtube.com/embed/pBZky-m4Oj8" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </th>
+                <th scope="col">
+                    <iframe width="460" height="215" src="https://www.youtube.com/embed/kFxoYcpwdnI" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </th>
+            </tr>
+        </thead>
+        </table>
+        
+        <script>
+            // Modal Image Gallery
+            function onClick(element) {
+                document.getElementById("img01").src = element.src;
+                document.getElementById("modal01").style.display = "block";
+                var captionText = document.getElementById("caption");
+                captionText.innerHTML = element.alt;
             }
-        }
 
-        // Close the sidebar with the close button
-        function w3_close() {
-            mySidebar.style.display = "none";
-        }
-    </script>
+
+            // Toggle between showing and hiding the sidebar when clicking the menu icon
+            var mySidebar = document.getElementById("mySidebar");
+
+            function w3_open() {
+                if (mySidebar.style.display === 'block') {
+                    mySidebar.style.display = 'none';
+                } else {
+                    mySidebar.style.display = 'block';
+                }
+            }
+
+            // Close the sidebar with the close button
+            function w3_close() {
+                mySidebar.style.display = "none";
+            }
+        </script>
 
 </body>
 </html>

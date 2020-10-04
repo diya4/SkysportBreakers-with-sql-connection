@@ -21,4 +21,3 @@ namespace Skysport_Breakers.Models
         public List<string> Users { get; set; }
     }
 }
-    
