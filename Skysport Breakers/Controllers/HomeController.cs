@@ -53,6 +53,21 @@ namespace Skysport_Breakers.Controllers
             return View();
         }
 
+        public IActionResult MemberBenifits()
+        {
+            return View();
+        }
+
+        public IActionResult Membership()
+        {
+            return View();
+        }
+
+        public IActionResult MemberUseful()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
