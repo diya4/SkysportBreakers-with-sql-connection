@@ -6,6 +6,39 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\Images\Ater.png" />
+    <None Include="wwwroot\Images\Ater1.png" />
+    <None Include="wwwroot\Images\Ater2.png" />
+    <None Include="wwwroot\Images\CoreyWebster.png" />
+    <None Include="wwwroot\Images\CoreyWebster1.png" />
+    <None Include="wwwroot\Images\CoreyWebster2.png" />
+    <None Include="wwwroot\Images\FinnDelany.png" />
+    <None Include="wwwroot\Images\FinnDelany1.png" />
+    <None Include="wwwroot\Images\FinnDelany2.png" />
+    <None Include="wwwroot\Images\Jarrad.png" />
+    <None Include="wwwroot\Images\Jarrad1.png" />
+    <None Include="wwwroot\Images\Jarrad2.png" />
+    <None Include="wwwroot\Images\JordanNgatai.png" />
+    <None Include="wwwroot\Images\JordanNgatai1.png" />
+    <None Include="wwwroot\Images\JordanNgatai2.png" />
+    <None Include="wwwroot\Images\RJ.png" />
+    <None Include="wwwroot\Images\RJ1.png" />
+    <None Include="wwwroot\Images\RJ2.png" />
+    <None Include="wwwroot\Images\RobLoe.png" />
+    <None Include="wwwroot\Images\RobLoe1.png" />
+    <None Include="wwwroot\Images\RobLoe2.png" />
+    <None Include="wwwroot\Images\Scotty.png" />
+    <None Include="wwwroot\Images\Scotty1.png" />
+    <None Include="wwwroot\Images\Scotty2.png" />
+    <None Include="wwwroot\Images\Spark-Arena.png" />
+    <None Include="wwwroot\Images\TomAbercrombie.png" />
+    <None Include="wwwroot\Images\TomAbercrombie1.png" />
+    <None Include="wwwroot\Images\TomAbercrombie2.png" />
+    <None Include="wwwroot\Images\TomVodanovich.png" />
+    <None Include="wwwroot\Images\TomVodanovich1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.6" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.6" />

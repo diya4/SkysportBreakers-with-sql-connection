@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    .design {
+        text-align: center;
+        font-size: 48px;
+    }
+</style>
+
+<html>
+<body>
+    <div class="design">---USEFUL INFORMATION---</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">
+                    <a href="@Url.Action("TermsAndConditions","Home")" class="w3-bar-item w3-button">Terms and Conditions</a>
+                    <p>Please read carefully before purchasing a Sky Sport Breakers Membership</p>
+                </th>
+                <th scope="col">
+                    <a href="@Url.Action("Questions","Home")" class="w3-bar-item w3-button">Frequently Asked Questions</a>
+                    <p>Some of the comman questions ans answers about Sky Sport Breakers Membership</p>
+                </th>
+                <th scope="col">
+                    <a href="@Url.Action("ContactPage","Home")" class="w3-bar-item w3-button">Contact Us</a>
+                    <p>Can't find the information you were looking for? Please get in touch.</p>
+                </th>
+            </tr>
+        </thead>
+    </table>
+</body>
+</html>
