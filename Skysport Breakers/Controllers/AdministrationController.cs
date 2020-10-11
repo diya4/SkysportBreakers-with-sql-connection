@@ -83,15 +83,12 @@ namespace Skysport_Breakers.Controllers
             };
 
             // Retrieve all the Users
-            foreach (var user in userManager.Users)
+            foreach (var user in userManager.Users.ToList())
             {
                 // If the user is in this role, add the username to
                 // Users property of EditRoleViewModel. This model
                 // object is then passed to the view for display
-                if (await userManager.IsInRoleAsync(user, role.Name))
-                {
                     model.Users.Add(user.UserName);
-                }
             }
 
             return View(model);

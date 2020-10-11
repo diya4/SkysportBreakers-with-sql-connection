@@ -11,8 +11,32 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <STYLE>
     h1 {
-        font-size: 150px;
+        font-size: 190px;
+        font: Proxima Nova;
     }
+
+    h2 {
+        font-size: 40px;
+        color: white;
+        font: Proxima Nova;
+    }
+    /* Container holding the image and the text */
+    .container {
+        position: relative;
+        text-align: center;
+        color: black;
+    }
+
+    /* Centered text */
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+
 </STYLE>
 <html>
 <body>
@@ -31,8 +55,8 @@
                 </th>
                 <th scope="col">
                     <iframe width="460" height="215" src="https://www.youtube.com/embed/kFxoYcpwdnI" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
                     </iframe>
                     <h6>Sky Sport Breakers vs Illawarra Hawks | NBL20 | 2 February 2020 | Full Time Highlights</h6>
                 </th>
@@ -46,7 +70,50 @@
             </tr>
         </thead>
     </table>
-    <a href="@Url.Action("Videos","Home")" >View More ></a>
+    <a href="@Url.Action("Videos","Home")">View More ></a>
+    <br /><br />
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">
+                    <div class="container">
+                        <img src="~/Images/bb.jpg" alt="junior breaker" class="img-thumbnail">
+                        <div class="centered">
+                            <h2>
+                                LATEST MERCH
+                                <a href="@Url.Action("","Home")" class="w3-bar-item w3-button">BUY NOW</a>
+                            </h2>
+                        </div>
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="container">
+                        <img src="~/Images/bb.jpg" alt="junior breaker" class="img-thumbnail">
+                        <div class="centered">
+                            <h2>
+                                MEMBERSHIP
+                                <a href="@Url.Action("Membership","Home")" class="w3-bar-item w3-button">LEARN MORE</a>
+                            </h2> 
+                        </div>
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="container">
+                        <img src="~/Images/bb.jpg" alt="junior breaker" class="img-thumbnail">
+                        <div class="centered">
+                            <h2>
+                                JUNIOR BREAKERS
+                                <a href="@Url.Action("","Home")" class="w3-bar-item w3-button">LEARN MORE</a>
+                            </h2>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+    </table>
+    
+
 
     <script>
         // Modal Image Gallery
