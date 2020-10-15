@@ -83,7 +83,21 @@ namespace Skysport_Breakers.Controllers
             return View();
         }
 
-        
+        public IActionResult tickets()
+        {
+            return View();
+        }
+
+        public IActionResult merchHP()
+        {
+            return View();
+        }
+
+        public IActionResult Academy()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

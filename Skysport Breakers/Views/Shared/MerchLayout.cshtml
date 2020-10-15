@@ -13,31 +13,19 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 
-    <style>
-        body {
-            background-color: #0085bd;
-        }
-    </style>
-
 </head>
 <body>
     <header>
         <!-- Navbar (sit on top) -->
         <div class="w3-top">
             <div class="w3-bar w3-white w3-card" id="myNavbar">
-                <a href="@Url.Action("JBhome","Home")" class="w3-bar-item w3-button w3-wide">Junior Breakers</a>
-                <a href="#work" class="w3-bar-item w3-button"> Membership</a>
-                <a href="#pricing" class="w3-bar-item w3-button"> Camps</a>
-                <a href="@Url.Action("","")" class="w3-bar-item w3-button"> Saturday Skills</a>
-                <a href="@Url.Action("Academy","Home")" class="w3-bar-item w3-button"> Academy</a>
-                <a href="@Url.Action("","")" class="w3-bar-item w3-button">Leagues</a>
-                <div class="w3-dropdown-hover w3-hide-small">
-                    <button class="w3-button" title="Notifications"> More</button>
-                    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-                        <a href="@Url.Action("ContactPage","Home")" class="w3-bar-item w3-button">Contact us</a>
-                        <a href="@Url.Action("Index","Home")" class="w3-bar-item w3-button">Skysport Breakers</a>
-                        <a href="@Url.Action("","Home")" class="w3-bar-item w3-button">Sunday open gym</a>
-                    </div>
+                <a href="@Url.Action("Index","Home")" class="w3-bar-item w3-button w3-wide"><img src="~/Images/LogoBlack.png" alt="Boss" style="width:200px; height:50px;"></a>
+                <div class="w3-right">
+                    <a href="#work" class="w3-bar-item w3-button"> Shop</a>
+                    <a href="#pricing" class="w3-bar-item w3-button"> Search</a>
+                    <a href="@Url.Action("","")" class="w3-bar-item w3-button"> Clearance</a>
+                    <a href="@Url.Action("","")" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact</a>
+                    <a href="@Url.Action("","")" class="w3-bar-item w3-button"> <img src="~/Images/cart.png" alt="Boss" style="width:25px; height:25px;"></a>
                 </div>
                 <div>
                     <!--partial layout for logged in user-->

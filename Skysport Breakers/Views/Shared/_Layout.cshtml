@@ -14,7 +14,7 @@
         <!-- Navbar (sit on top) -->
         <div class="w3-top">
             <div class="w3-bar w3-white w3-card" id="myNavbar">
-                <a href="@Url.Action("Index","Home")" class="w3-bar-item w3-button w3-wide">Skysport Breakers</a>
+                <a href="@Url.Action("Index","Home")" class="w3-bar-item w3-button w3-wide"><img src="~/Images/LogoBlack.png" alt="Boss" style="width:200px; height:50px;"></a>
                 <div class="w3-dropdown-hover w3-hide-small">
                     <button class="w3-button" title="Notifications"> <i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i>Team <i class="fa fa-caret-down"></i></button>
                     <div class="w3-dropdown-content w3-card-4 w3-bar-block">
@@ -31,11 +31,14 @@
                         <a href="@Url.Action("MemberUseful","Home")" class="w3-bar-item w3-button">Useful Information</a>
                     </div>
                 </div>
-                <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Merchandise</a>
-                <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Tickets</a>
+                <a href="@Url.Action("merchHP","Home")" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Merchandise</a>
+                <a href="@Url.Action("tickets","Home")" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Tickets</a>
                 <a href="@Url.Action("ContactPage","Home")" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact</a>
                 <a href="@Url.Action("Privacy","Home")" class="w3-bar-item w3-button"><i class="fa fa-lock"></i> Privacy</a>
                 <a asp-area="Identity" asp-page="/Account/Login" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Login/Register</a>
+                <div class="w3-right">
+                    <a href="@Url.Action("","")" class="w3-bar-item w3-button"> <img src="~/Images/cart.png" alt="Boss" style="width:25px; height:25px;"></a>
+                </div>
                 <div>
                     <!--partial layout for logged in user-->
                     <partial name="_LoginPartial" />
