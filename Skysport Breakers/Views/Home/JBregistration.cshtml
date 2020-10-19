@@ -1,0 +1,65 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@{
+    Layout = null;
+}
+
+@{
+    Layout = "~/Views/Shared/JBlayout.cshtml";
+
+}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<html>
+<body>
+    <div class="w3-container" style="padding:128px 16px" id="contact">
+    <h3 class="w3-center">REGISTRATION FOR JUNIOR BREAKER</h3>
+    <p class="w3-center w3-large"></p>
+    <div style="margin-top:48px">
+        <h6><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> </h6>
+        <h6><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i></h6>
+        <h6><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> </h6>
+        <br>
+        <h5>
+            Your details
+        </h5>
+        <form action="/action_page.php" target="_blank">
+            <h6><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></h6>
+            <h6><input class="w3-input w3-border" type="email" placeholder="xxxxxx@email.com" required name="Email"></h6>
+            <h6><input class="w3-input w3-border" type="text" placeholder="Address" required name="Address"></h6>
+            <h6><input class="w3-input w3-border" type="number" placeholder="Phone Number" required name="Phone Number"></h6>
+            <h6><input class="w3-input w3-border" type="number" placeholder="Home Number" required name="Home Number"></h6>
+            <h5>
+                Your child(s) details
+            </h5>
+            <h6><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></h6>
+            <h6><input class="w3-input w3-border" type="number" placeholder="Age" required name="Age"></h6>
+            <h6><input class="w3-input w3-border" type="number" placeholder="Age" required name="Age"></h6>
+            <h6><input class="w3-input w3-border" type="date" placeholder="Birthdate" required name="Birthdate"></h6>
+            <select class="form-control" id="StudentGender" name="Skill Level">
+                <option>Select Skill Level</option>
+                <option>Beginneer</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+            </select>
+            <h6><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></h6>
+            <h6>
+                <button class="w3-button w3-black" type="submit">
+                    <i class="fa fa-paper-plane"></i> Submit registration
+                </button>
+            </h6>
+        </form>
+    </div>
+</div>
+</body>
+</html>
