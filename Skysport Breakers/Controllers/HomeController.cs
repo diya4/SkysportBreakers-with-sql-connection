@@ -7,6 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Skysport_Breakers.Models;
 
+using Microsoft.Data.SqlClient;
+using Microsoft.Data;
+
+
 namespace Skysport_Breakers.Controllers
 {
     public class HomeController : Controller
@@ -98,9 +102,37 @@ namespace Skysport_Breakers.Controllers
             return View();
         }
 
-        public IActionResult JBregistration()
+        public IActionResult JBregistration() 
         {
             return View();
+        }
+
+        //httpGet
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(JBRegistration JB)
+        {
+            string connection = "Server=(localdb)\\mssqllocaldb;Database=(Diya)SkysportBreakers;Trusted_Connection=True;MultipleActiveResultSets=true";
+
+
+            using (SqlConnection sqlconn = new SqlConnection(connection))
+            {
+                string sqlquery = "Insert into [dbo].[JBregistration](PName, PEmail, PAddress, PPhoneNumber, PHomeNumber, CName, CAge, CDOB, CGender, SkillLevel) " +
+                    "values (' " + JB.PName + " ' ,  ' " + JB.PEmail + " ' , ' " + JB.PAddress + " ' ,   '" + JB.PPhoneNumber + "' , '" + JB.PHomeNumber + "' ,  " +
+                    "'" + JB.CName + "' , '" + JB.CAge + "' , ' " + JB.CDOB + " ' ,   '" + JB.CGender + "' , '" + JB.SkillLevel + "' )";
+                using (SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn))
+                {
+                    sqlconn.Open();
+                    sqlcomm.ExecuteNonQuery();
+                    sqlconn.Close();
+                    ViewData["Message"] = "Thank you for registrating your child" + JB.CName + ". We will let get back to you as soon as possible.";
+                    return View();
+                }
+            }
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
