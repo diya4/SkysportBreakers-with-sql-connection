@@ -16,23 +16,30 @@
 </head>
 <body>
     <header>
-        <!-- Navbar (sit on top) -->
-        <div class="w3-top">
-            <div class="w3-bar w3-white w3-card" id="myNavbar">
-                <a href="@Url.Action("Index","Home")" class="w3-bar-item w3-button w3-wide"><img src="~/Images/LogoBlack.png" alt="Boss" style="width:200px; height:50px;"></a>
-                <div class="w3-right">
-                    <a href="#work" class="w3-bar-item w3-button"> Shop</a>
-                    <a href="#pricing" class="w3-bar-item w3-button"> Search</a>
-                    <a href="@Url.Action("","")" class="w3-bar-item w3-button"> Clearance</a>
-                    <a href="@Url.Action("","")" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
+            <a href="@Url.Action("Index","Home")" class="w3-bar-item w3-button w3-wide"><img src="~/Images/LogoBlack.png" alt="Boss" style="width:200px; height:50px;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#coll">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="coll">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#work" class="w3-bar-item w3-button"> Shop</a>
+                    <li class="nav-item">
+                        <a href="@Url.Action("","")" class="w3-bar-item w3-button"> Clearance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("","")" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("","")" class="w3-bar-item w3-button">Leagues</a>
+                    </li>
                     <a href="@Url.Action("","")" class="w3-bar-item w3-button"> <img src="~/Images/cart.png" alt="Boss" style="width:25px; height:25px;"></a>
-                </div>
-                <div>
-                    <!--partial layout for logged in user-->
-                    <partial name="_LoginPartial" />
-                </div>
+                </ul>
             </div>
-        </div>
+            <!--partial layout for logged in user-->
+            <partial name="_LoginPartial" />
+        </nav>
     </header>
     <br /><br /><br /><br /><br><br>
     <div class="container">
