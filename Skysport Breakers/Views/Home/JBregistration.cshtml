@@ -1,7 +1,7 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model Skysport_Breakers.Models.JBRegistration
+
 @{
+    ViewData["Title"] = "Create";
 }
 
 
@@ -14,52 +14,93 @@
 
 }
 
+<style>
+    label, option {
+        color: white;
+    }
+
+    .form-control {
+        color: white;
+    }
+</style>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<html>
-<body>
-    <div class="w3-container" style="padding:128px 16px" id="contact">
-    <h3 class="w3-center">REGISTRATION FOR JUNIOR BREAKER</h3>
-    <p class="w3-center w3-large"></p>
-    <div style="margin-top:48px">
-        <h6><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> </h6>
-        <h6><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i></h6>
-        <h6><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> </h6>
-        <br>
-        <h5>
-            Your details
-        </h5>
-        <form action="/action_page.php" target="_blank">
-            <h6><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></h6>
-            <h6><input class="w3-input w3-border" type="email" placeholder="xxxxxx@email.com" required name="Email"></h6>
-            <h6><input class="w3-input w3-border" type="text" placeholder="Address" required name="Address"></h6>
-            <h6><input class="w3-input w3-border" type="number" placeholder="Phone Number" required name="Phone Number"></h6>
-            <h6><input class="w3-input w3-border" type="number" placeholder="Home Number" required name="Home Number"></h6>
-            <h5>
-                Your child(s) details
-            </h5>
-            <h6><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></h6>
-            <h6><input class="w3-input w3-border" type="number" placeholder="Age" required name="Age"></h6>
-            <h6><input class="w3-input w3-border" type="number" placeholder="Age" required name="Age"></h6>
-            <h6><input class="w3-input w3-border" type="date" placeholder="Birthdate" required name="Birthdate"></h6>
-            <select class="form-control" id="StudentGender" name="Skill Level">
-                <option>Select Skill Level</option>
-                <option>Beginneer</option>
-                <option>Intermediate</option>
-                <option>Advanced</option>
-            </select>
-            <h6><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></h6>
-            <h6>
-                <button class="w3-button w3-black" type="submit">
-                    <i class="fa fa-paper-plane"></i> Submit registration
-                </button>
-            </h6>
+<h3 class="w3-center">REGISTRATION FOR JUNIOR BREAKER</h3>
+
+<div class="row">
+    <div class="col-md-9">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PName" class="control-label"></label>
+                <input asp-for="PName" class="form-control" />
+                <span asp-validation-for="PName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PEmail" class="control-label"></label>
+                <input asp-for="PEmail" class="form-control" />
+                <span asp-validation-for="PEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PAddress" class="control-label"></label>
+                <input asp-for="PAddress" class="form-control" />
+                <span asp-validation-for="PAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PPhoneNumber" class="control-label"></label>
+                <input asp-for="PPhoneNumber" class="form-control" />
+                <span asp-validation-for="PPhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PHomeNumber" class="control-label"></label>
+                <input asp-for="PHomeNumber" class="form-control" />
+                <span asp-validation-for="PHomeNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CName" class="control-label"></label>
+                <input asp-for="CName" class="form-control" />
+                <span asp-validation-for="CName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CAge" class="control-label"></label>
+                <input asp-for="CAge" class="form-control" />
+                <span asp-validation-for="CAge" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CDOB" class="control-label"></label>
+                <input asp-for="CDOB" class="form-control" />
+                <span asp-validation-for="CDOB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CGender" class="control-label"></label>
+                <input type="radio" asp-for="CGender" name="Gender" class="form-control" value="Male" />
+                <input type="radio" asp-for="CGender" name="Gender" class="form-control" value="Female" />
+                <input type="radio" asp-for="CGender" name="Gender" class="form-control" value="Gender Diverse" />
+                <span asp-validation-for="CGender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SkillLevel" class="control-label"></label>
+                <select asp-for="SkillLevel">
+                    <option selected disabled> --- Select Skill Level --- </option>
+                    <option>Beginneer</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+                </select>
+                <span asp-validation-for="SkillLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register" class="btn btn-primary" />
+            </div>
+            <b>ViewData["Message"]</b>
+
+            <!--https://youtu.be/DjUjNrqC1jU-->
         </form>
     </div>
 </div>
-</body>
-</html>
+    
+

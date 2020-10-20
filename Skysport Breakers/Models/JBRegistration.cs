@@ -8,6 +8,8 @@ namespace Skysport_Breakers.Models
 {
     public class JBRegistration
     {
+        [Key]
+        public int ID { get; set; }
 
         [Required(ErrorMessage = "Enter Name" )]
         [Display (Name = "Enter Name :")]
@@ -50,7 +52,7 @@ namespace Skysport_Breakers.Models
 
 
         [Required(ErrorMessage = "Enter Your Child's  Gender")]
-        [Display(Name = "Enter Child's Gender :")]
+        [Display(Name = "Please Select Child's Gender :")]
         public char CGender { get; set; }
 
 
