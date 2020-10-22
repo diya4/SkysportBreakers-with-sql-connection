@@ -135,6 +135,21 @@ namespace Skysport_Breakers.Controllers
             }
         }
 
+        public IActionResult JBMembership()
+        {
+            return View();
+        }
+
+        public IActionResult JBCamp()
+        {
+            return View();
+        }
+
+        public IActionResult JBSkills()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
