@@ -8,6 +8,7 @@ namespace Skysport_Breakers.Models
 {
     public class JBRegistration
     {
+        //stores data 
         [Key]
         public int ID { get; set; }
 

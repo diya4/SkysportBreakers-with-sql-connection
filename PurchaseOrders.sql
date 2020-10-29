@@ -1,0 +1,16 @@
+﻿CREATE TABLE [dbo].[PurchaseOrder] (
+    [poPurchaseOrderID] INT IDENTITY (1, 1) NOT NULL,
+    [poReferenceID] VARCHAR (100) NULL,
+    [poDate]  VARCHAR (100) NULL,
+    [poOrderedBy] VARCHAR (100) NULL,
+    [poRecieveDate]  VARCHAR (100) NULL,
+	[poPromiseDate] VARCHAR (100) NULL,
+	[poCompleted]   VARCHAR (100) NULL,
+	[poTax]  VARCHAR (100) NULL,
+	[poFreightHandling] VARCHAR (100) NULL,
+	[poPaid]  VARCHAR (100) NULL,
+	[poPaidType] VARCHAR (100) NULL,
+	[poConfirmed] VARCHAR (100) NULL,
+	[poCancelled] VARCHAR (100) NULL,
+	[poNotes] VARCHAR (100) NULL,
+);

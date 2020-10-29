@@ -113,6 +113,7 @@ namespace Skysport_Breakers.Controllers
             return View();
         }
 
+        //Connects to sql and opens and searches database for the JBregistration table and adds the data user added to th table then closes sql 
         [HttpPost]
         public IActionResult Create(JBRegistration JB)
         {

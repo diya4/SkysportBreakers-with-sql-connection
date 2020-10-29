@@ -19,8 +19,155 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<style>
+    /* Container holding the image and the text */
+    .container {
+        position: relative;
+        text-align: center;
+        color: black;
+    }
+
+    /* Centered text */
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    img {
+        opacity: 0.25;
+    }
+    .button {
+        background-color: #0085bd; /* Light Blue */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+    }
+
+    .button1 {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+    .button2:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+    .button5 {
+        border-radius: 35%;
+    }
+
+
+</style>
+
 <html>
 <body>
 
+    <div class="container">
+        <img src="~/Images/bb.jpg" height="550" width="1050" class="img" alt="Responsive image">
+        <div class="centered">
+            <h1>
+                <b>
+                    BECOME
+                    <br />
+                    #UNBREAKABLE
+                </b>
+            </h1>
+            <br />
+            <h1><a href="#" class="button button2">SHOP THE LOOK</a></h1>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">
+                    <h3>JUST LANDED</h3>
+                    <h5>Breakers 2020/21 collection is now available! Get in while stocks last!</h5>
+                    <button class="button button1">BUY NOW</button>
+                </th>
+                <th scope="col">
+                    <div class="container">
+                        <img src="~/Images/bb.jpg" height="250" width="250" class="img" alt="Responsive image">
+                        <div class="centered">
+                            <h1>
+                                <b>
+                                    AVAILABLE
+                                </b>
+                            </h1>
+                            <h3>
+                                <b>
+                                    NOW
+                                </b>
+                            </h3>
+                            <br />
+                            <h1><a href="#" class="button button2">SHOP THE LOOK</a></h1>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th scope="col">
+                    <div class="container">
+                        <img src="~/Images/bb.jpg" height="250" width="250" class="img" alt="Responsive image">
+                        <div class="centered">
+                            <h1>
+                                <b>
+                                    AVAILABLE
+                                </b>
+                            </h1>
+                            <h3>
+                                <b>
+                                    NOW
+                                </b>
+                            </h3>
+                            <br />
+                            <h1><a href="#" class="button button2">SHOP THE LOOK</a></h1>
+                        </div>
+                    </div>
+                </th>
+                <th scope="col">
+                    <h3>BREAKERS COTTON FACE MASK</h3>
+                    <h5>$25.00</h5>
+                    <h5>Size</h5>
+                    <button class="button button5">Small</button><button class="button button5">Medium</button><button class="button button5">Large</button>
+                    <h1><a href="#" class="button button2">ADD TO CART</a></h1>
+                </th>
+            </tr>
+        </thead>
+    </table>
+    <br />
+    <br />
+    <br />
+    <div class="container">
+        <img src="~/Images/bb.jpg" height="550" width="1050" class="img" alt="Responsive image">
+        <div class="centered">
+            <h1>
+                <b>
+                    20019/20 SALE
+                    <br />
+                    Official Breakers On Court Gear
+                </b>
+            </h1>
+            <br />
+            <h1><a href="#" class="button button2">SHOP NOW</a></h1>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div style="width:1050px;height:550px;overflow-y:hidden;overflow-x:scroll;">
+        <p style="width:250%;"></p>
+    </div>
+    
 </body>
 </html>
