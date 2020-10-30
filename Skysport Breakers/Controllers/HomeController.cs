@@ -150,6 +150,28 @@ namespace Skysport_Breakers.Controllers
         {
             return View();
         }
+        public IActionResult shopthelook()
+        {
+            return View();
+        }
+        public IActionResult Clearence()
+        {
+            return View();
+        }
+
+        public IActionResult Adultlook()
+        {
+            return View();
+        }
+
+        public IActionResult kidlook()
+        {
+            return View();
+        }
+        public IActionResult Payment()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
