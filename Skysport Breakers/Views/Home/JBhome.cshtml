@@ -1,0 +1,71 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+    Layout = null;
+}
+
+@{ 
+    Layout = "~/Views/Shared/JBlayout.cshtml";
+
+}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<html>
+<body>
+    <div>
+        <h2>ABOUT JUNIOR BREAKERS</h2> 
+    </div>
+    <div>
+        <h5>
+            Junior Breakers is the official grass roots arm of the Sky Sport Breakers, providing programmes and camps to inspire the community’s basketball stars of the future.
+            We are a membership based organisation and cater for girls and boys aged 5-12yrs.
+            Our programmes focus on basketball fundamentals in a fun and encouraging environment and are led by our highly experienced coaches at the Breakers official training facility in Mairangi Bay.
+        </h5>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="~/Images/bb.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Membership</h5>
+                            <p class="card-text">First access to sell-out programmes; discounted fees; special offers on Sky Sport Breakers tickets; and access to our open gym each Sunday.</p>
+                            <a href="@Url.Action("JBMembership","Home")" class="btn btn-primary">ON SALE NOW</a>
+                        </div>
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="~/Images/bb.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Saturday Skills</h5>
+                            <p class="card-text">These sessions focus on individual development of skills like dribbling, passing, shooting and defence. Suitable for kids of all ability levels.</p>
+                            <a href="@Url.Action("JBSkills","Home")" class="btn btn-primary">ON SALE NOW</a>
+                        </div>
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="~/Images/bb.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Holiday camp</h5>
+                            <p class="card-text">Suitable for kids of all abilities Year 1-8 , our camps teach basketball fundamentals in a fun & encouraging setting. Get in quick, they sell out! </p>
+                            <a href="@Url.Action("JBCamp","Home")" class="btn btn-primary">ON SALE NOW</a>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+    </table>
+</body>
+</html>
