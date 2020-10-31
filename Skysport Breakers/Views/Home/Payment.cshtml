@@ -13,10 +13,6 @@
 
 }
 
-
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,9 +26,14 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/style.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body class="grey lighten-3">
+
     <!--Main layout-->
     <main class="mt-5 pt-4">
         <div class="container wow fadeIn">
@@ -197,21 +198,44 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-3 mb-3">
-                                    <label for="cc-expiration">Expiration</label>
-                                    <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                                    <div class="invalid-feedback">
-                                        Expiration date required
+                                <div class="col-md-6 mb-3">
+                                    <label for="cc-expiration">Expiration Date</label>
+                                    <div class="form-group" id="expiration-date">
+                                        <select>
+                                            <option value="01">January</option>
+                                            <option value="02">February </option>
+                                            <option value="03">March</option>
+                                            <option value="04">April</option>
+                                            <option value="05">May</option>
+                                            <option value="06">June</option>
+                                            <option value="07">July</option>
+                                            <option value="08">August</option>
+                                            <option value="09">September</option>
+                                            <option value="10">October</option>
+                                            <option value="11">November</option>
+                                            <option value="12">December</option>
+                                        </select>
+                                        <select>
+                                            <option value="16"> 2016</option>
+                                            <option value="17"> 2017</option>
+                                            <option value="18"> 2018</option>
+                                            <option value="19"> 2019</option>
+                                            <option value="20"> 2020</option>
+                                            <option value="21"> 2021</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Expiration date required
+                                        </div>
+                                    </div>
+                                 </div>
+                                    <div class="col-md-5 mb-3">
+                                        <label for="cc-expiration">CVV</label>
+                                        <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                                        <div class="invalid-feedback">
+                                            Security code required
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 mb-3">
-                                    <label for="cc-expiration">CVV</label>
-                                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                                    <div class="invalid-feedback">
-                                        Security code required
-                                    </div>
-                                </div>
-                            </div>
                             <hr class="mb-4">
                             <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
 
@@ -360,21 +384,8 @@
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Initializations -->
     <script type="text/javascript">
-    // Animations initialization
-    new WOW().init();
+        // Animations initialization
+        new WOW().init();
     </script>
 </body>
 
-</html>
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
