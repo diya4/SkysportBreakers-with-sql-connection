@@ -168,7 +168,23 @@ namespace Skysport_Breakers.Controllers
         {
             return View();
         }
+
+        public IActionResult headwear()
+        {
+            return View();
+        }
+
         public IActionResult Payment()
+        {
+            return View();
+        }
+
+        public IActionResult singlet()
+        {
+            return View();
+        }
+
+        public IActionResult hoodie()
         {
             return View();
         }
