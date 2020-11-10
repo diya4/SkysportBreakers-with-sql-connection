@@ -189,6 +189,36 @@ namespace Skysport_Breakers.Controllers
             return View();
         }
 
+        //httpGet
+        public IActionResult ContactUs()
+        {
+            return View();
+        }
+
+        //Connects to sql and opens and searches database for the JBregistration table and adds the data user added to th table then closes sql 
+        [HttpPost]
+        public IActionResult ContactUs(ContactUs cu)
+        {
+            string connection = "Server=(localdb)\\mssqllocaldb;Database=(Diya)SkysportBreakers;Trusted_Connection=True;MultipleActiveResultSets=true";
+
+
+            using (SqlConnection sqlconn = new SqlConnection(connection))
+            {
+                string sqlquery = "Insert into [dbo].[](Name, Email, Message) ";
+                using (SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn))
+                {
+                    sqlconn.Open();
+                    sqlcomm.Parameters.AddWithValue("@Name", cu.Name);
+                    sqlcomm.Parameters.AddWithValue("@Email", cu.Email);
+                    sqlcomm.Parameters.AddWithValue("@Message", cu.Message);
+                    sqlcomm.ExecuteNonQuery();
+                    sqlconn.Close();
+                    ViewData["Message"] = "Thank you for your enqiry. We will let get back to you as soon as possible.";
+                    return View();
+                }
+            }
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
