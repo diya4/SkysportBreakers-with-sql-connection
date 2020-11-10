@@ -54,7 +54,7 @@ namespace Skysport_Breakers.Models
 
         [Required(ErrorMessage = "Enter Your Child's  Gender")]
         [Display(Name = "  Child's Gender :")]
-        public char CGender { get; set; }
+        public string CGender { get; set; }
 
 
         [Required(ErrorMessage = "Enter Skill level")]
