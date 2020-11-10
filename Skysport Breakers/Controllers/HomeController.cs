@@ -204,16 +204,14 @@ namespace Skysport_Breakers.Controllers
 
             using (SqlConnection sqlconn = new SqlConnection(connection))
             {
-                string sqlquery = "Insert into [dbo].[](Name, Email, Message) ";
+                string sqlquery = "Insert into [dbo].[ContactUs](Name, Email, Message) " +
+                    "values (' " + cu.Name + " ' ,  ' " + cu.Email + " ' , ' " + cu.Message + " ' )";
                 using (SqlCommand sqlcomm = new SqlCommand(sqlquery, sqlconn))
                 {
                     sqlconn.Open();
-                    sqlcomm.Parameters.AddWithValue("@Name", cu.Name);
-                    sqlcomm.Parameters.AddWithValue("@Email", cu.Email);
-                    sqlcomm.Parameters.AddWithValue("@Message", cu.Message);
                     sqlcomm.ExecuteNonQuery();
                     sqlconn.Close();
-                    ViewData["Message"] = "Thank you for your enqiry. We will let get back to you as soon as possible.";
+                    ViewData["Message1"] = "Thank you for your enqiry. We will let get back to you as soon as possible.";
                     return View();
                 }
             }
